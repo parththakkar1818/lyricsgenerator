@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lyrics Generator</title>
+
+</head>
+<body>
+    <form method="post" action="/">
+        <div class="container">
+            <h1 class="animated">Lyrics Generator</h1>
+        <div class="form-group animated">
+            <input type="text" placeholder="Enter song name" id="songName" name="songname" required>
+        </div>
+        <div class="form-group animated">
+            <input type="text" placeholder="Enter artist name" id="artistName" name="artistname" required>
+        </div>
+        <div class="form-group animated">
+            <button onclick="generateLyrics()">Generate Lyrics</button>
+        </div>
+    </form>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

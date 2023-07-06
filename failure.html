@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>failure</title>
+    <style>
+        .tryagain {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            background-color: #ff6b6b;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            }
+
+            .tryagain:hover {
+            background-color: #ff5252;
+            }
+
+            .tryagain:before {
+            content: '';
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            margin-top: -12px;
+            width: 24px;
+            height: 24px;
+            border: 2px solid;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.5s;
+            animation: rotate 0.8s linear infinite;
+            }
+
+            .tryagain.sending {
+            pointer-events: none;
+            cursor: not-allowed;
+            }
+
+            .tryagain.sending:before {
+            transition-delay: 0.5s;
+            transition-duration: 1s;
+            opacity: 1;
+            }
+
+            @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+            }
+
+    </style>
+</head>
+<body>
+    <h1>Ohh! No lyrics Found</h1>
+    <form action="/failure" method="post">
+        <button class="tryagain" type="submit">Try Again</button>
+    </form>
+    
+</body>
+</html>
